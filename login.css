@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Authentication Sizing */
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    transition: all 0.3s ease;
+}
+
+.auth-box {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #b21f1f;
+}
+
+.hint-text {
+    font-size: 11px;
+    color: #718096;
+    display: block;
+    margin-top: 4px;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #b21f1f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.auth-btn:hover {
+    background-color: #931a1a;
+}
+
+.toggle-text {
+    margin-top: 20px;
+    color: #718096;
+    font-size: 14px;
+}
+
+.toggle-text a {
+    color: #b21f1f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Interactive Dashboard View Layout */
+.dashboard-container {
+    background: #f7fafc;
+    width: 100%;
+    max-width: 800px;
+    min-height: 500px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.dash-header {
+    background: #1a2a6c;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-badge {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.logout-btn {
+    background: #b21f1f;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.logout-btn:hover {
+    background: #931a1a;
+}
+
+.quiz-layout {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.quiz-card h2 {
+    color: #2d3748;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.options-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.option-btn {
+    background: #edf2f7;
+    color: #2d3748;
+    border: 2px solid #e2e8f0;
+    padding: 14px;
+    text-align: left;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-btn:hover:not([disabled]) {
+    background: #e2e8f0;
+    border-color: #cbd5e0;
+}
+
+.option-btn.correct {
+    background: #c6f6d5;
+    border-color: #38a169;
+    color: #22543d;
+}
+
+.option-btn.wrong {
+    background: #fed7d7;
+    border-color: #e53e3e;
+    color: #742a2a;
+}
+
+.next-btn {
+    background: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    float: right;
+}
+
+.next-btn:hover {
+    background: #0f1b4c;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.message.success { color: #38a169; }
+.message.error { color: #e53e3e; }
+.hidden { display: none !important; }

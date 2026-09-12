@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth & Quiz System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container" id="main-container">
+        <!-- Login Form -->
+        <div id="login-box" class="auth-box">
+            <h2>Welcome Back</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+            </form>
+            <p class="toggle-text">Don't have an account? <a href="#" id="to-signup">Sign Up</a></p>
+            <div id="login-message" class="message"></div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-box" class="auth-box hidden">
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <div class="input-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required placeholder="Min. 8 characters">
+                    <small class="hint-text">Must be at least 8 characters long.</small>
+                </div>
+                <button type="submit" class="auth-btn">Sign Up</button>
+            </form>
+            <p class="toggle-text">Already have an account? <a href="#" id="to-login">Login</a></p>
+            <div id="signup-message" class="message"></div>
+        </div>
+    </div>
+
+    <!-- Dashboard / Quiz Screen (Expands width once visible) -->
+    <div id="dashboard-box" class="dashboard-container hidden">
+        <header class="dash-header">
+            <h3>Assessment Portal</h3>
+            <div>
+                <span class="user-badge">Welcome, <strong id="user-display-name">User</strong></span>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </header>
+        
+        <main class="quiz-layout">
+            <div class="quiz-card">
+                <div class="quiz-header">
+                    <span id="question-number">Question 1 of 3</span>
+                    <span id="score-counter">Score: 0</span>
+                </div>
+                
+                <h2 id="question-text">Loading question text...</h2>
+                
+                <div class="options-stack" id="options-container">
+                    <!-- Javascript generates buttons here -->
+                </div>
+                
+                <button id="next-btn" class="next-btn hidden">Next Question</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
